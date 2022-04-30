@@ -1,13 +1,12 @@
-from web_parser import WebParser
+import pandas as pd
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    WebParser("ToH_dump_tab_separated.csv")
+    file_path = "ToH_dump_tab_separated.csv"
+    file_path = file_path
+    df2 = pd.read_csv(file_path, sep="\t", index_col=0)
+    # Pandas.print(df)
+    df = df2[["brand", "model"]]
+    df["full"] = df["brand"] + " " + df["model"]
+    # Pandas.print(df)
+    print(list(df["full"]))
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

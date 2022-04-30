@@ -212,7 +212,7 @@ class Pandas:
         if caption:
             message += f"### {caption} ###\n"
 
-        desired_width = 1000
+        desired_width = 10000000
         pd.set_option('display.width', desired_width)
         np.set_printoptions(linewidth=desired_width)
         if isinstance(df, pd.DataFrame):
