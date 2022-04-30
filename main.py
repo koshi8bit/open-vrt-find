@@ -1,3 +1,4 @@
+from web_parser import WebParser
 
 
 def print_hi(name):
@@ -7,6 +8,6 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    WebParser("ToH_dump_tab_separated.csv")
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
